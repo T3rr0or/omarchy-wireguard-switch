@@ -24,6 +24,15 @@ up and down (an active desktop session normally may).
 omarchy plugin add https://github.com/T3rr0or/omarchy-wireguard-switch.git --enable
 ```
 
+## Remove
+
+```bash
+omarchy plugin remove io.github.t3rr0or.wireguard-switch
+```
+
+This only removes the widget. Your WireGuard connections stay in NetworkManager;
+delete one with `nmcli connection delete <name>`.
+
 ## Adding connections
 
 Import a wg-quick config into NetworkManager. The connection is named after the
