@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.t3rr0or.wireguard-switch",
+  "name": "WireGuard Switch",
+  "version": "1.0.0",
+  "author": "Stefan van Leeuwen",
+  "license": "MIT",
+  "description": "Switch between NetworkManager WireGuard connections from the bar. Only one tunnel is up at a time.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "WireGuard Switch",
+    "description": "Shows the active WireGuard connection; click to pick another or turn it off.",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "intervalSec": 3
+    },
+    "schema": [
+      {
+        "key": "intervalSec",
+        "type": "integer",
+        "label": "Status interval (seconds)",
+        "min": 1,
+        "max": 60,
+        "step": 1,
+        "defaultValue": 3
+      }
+    ]
+  }
+}
